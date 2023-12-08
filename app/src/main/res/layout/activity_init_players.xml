@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@drawable/pagebkg"
+    tools:context=".InitPlayers">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="50dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/white_border"
+            android:padding="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/enter_names_of_players"
+                android:textSize="40sp"
+                android:textAlignment="center"
+                android:textColor="@color/cyan"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/playerOne"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/white_border"
+                android:hint="@string/player_one_name"
+                android:inputType="text"
+                android:textColor="@color/white"
+                android:textColorHint="@color/softPastelBlue"
+                android:layout_marginTop="40dp"
+                android:padding="7dp"
+                android:drawableStart="@drawable/ic_xicon"
+                tools:ignore="Autofill,VisualLintTextFieldSize" />
+
+            <EditText
+                android:id="@+id/playerTwo"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/white_border"
+                android:textColorHint="@color/softPastelBlue"
+                android:textColor="@color/white"
+                android:hint="@string/player_two_name"
+                android:inputType="text"
+                android:layout_marginTop="40dp"
+                android:padding="7dp"
+                android:drawableStart="@drawable/ic_oicon"
+                tools:ignore="Autofill,VisualLintTextFieldSize" />
+
+            <Button
+                android:id="@+id/startButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/white_border"
+                android:text="@string/start_game"
+                android:textColor="@color/cyan"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:layout_marginTop="40dp"
+                android:padding="7dp"
+                tools:ignore="VisualLintButtonSize" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>
