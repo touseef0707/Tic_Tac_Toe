@@ -14,34 +14,6 @@ import java.util.Random;
 
 public class Bot extends AppCompatActivity {
 
-<<<<<<< HEAD
-    // Binding for the layout elements
-    ActivityMainBinding binding;
-
-    // List to store winning combinations
-    private final List<int[]> winning_combos = new ArrayList<>();
-
-    // Array to track the state of each game position
-    private int[] positions = {0, 0, 0, 0, 0, 0, 0, 0, 0};
-
-    // Variable to track the active player (1 or 2)
-    private int activePlayer = 1;
-
-    // Variable to track the total number of boxes selected
-    private int totalBoxesSelected = 1;
-
-    // Boolean to indicate if the game has ended
-    private Boolean endGame = false;
-
-    // Player names
-    String nameX, nameO;
-
-    // Player scores
-    int scoreX = 0;
-    int scoreO = 0;
-
-    // ImageView variable to track the current image being manipulated
-=======
     ActivityMainBinding binding;
     private final List<int[]> winning_combos = new ArrayList<>();
     private int[] positions = {0, 0, 0, 0, 0, 0, 0, 0, 0};
@@ -51,23 +23,14 @@ public class Bot extends AppCompatActivity {
     String nameX, nameO;
     int scoreX = 0;
     int scoreO = 0;
->>>>>>> origin/master
     ImageView image;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-<<<<<<< HEAD
-        // Inflating the layout using View Binding
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        // Initializing the list of winning combinations
-=======
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
-
->>>>>>> origin/master
         winning_combos.add(new int[]{0, 1, 2});
         winning_combos.add(new int[]{3, 4, 5});
         winning_combos.add(new int[]{6, 7, 8});
@@ -77,24 +40,12 @@ public class Bot extends AppCompatActivity {
         winning_combos.add(new int[]{0, 4, 8});
         winning_combos.add(new int[]{2, 4, 6});
 
-<<<<<<< HEAD
-        // Retrieving player names from the intent
-        nameX = getIntent().getStringExtra("namePlayerX");
-        nameO = getIntent().getStringExtra("namePlayerO");
-
-        // Setting player names on the UI
-        binding.x.setText(nameX);
-        binding.o.setText(nameO);
-
-        // Initiating the first turn based on the player type
-=======
         nameX = getIntent().getStringExtra("namePlayerX");
         nameO = getIntent().getStringExtra("namePlayerO");
 
         binding.x.setText(nameX);
         binding.o.setText(nameO);
 
->>>>>>> origin/master
         if (nameX.equals("Bot")) {
             turnCPU();
         } else if (nameX.equals("You")) {
@@ -107,14 +58,7 @@ public class Bot extends AppCompatActivity {
         return positions[position] == 0;
     }
 
-<<<<<<< HEAD
-    // Method to handle human player's turn
     public void turnHuman() {
-        // Set click listeners for each image view
-        // When an empty cell is clicked, set the input and switch to the CPU's turn
-=======
-    public void turnHuman() {
->>>>>>> origin/master
         binding.image1.setOnClickListener(view -> {
             if (isCellEmpty(0)) {
                 setInput((ImageView) view, 0);
@@ -169,18 +113,10 @@ public class Bot extends AppCompatActivity {
                 turnCPU();
             }
         });
-<<<<<<< HEAD
-    }
-
-    // Method to handle CPU player's turn
-    public void turnCPU() {
-        // If the game hasn't ended, CPU selects a random empty cell and sets the input
-=======
 
     }
 
     public void turnCPU() {
->>>>>>> origin/master
         if (!endGame) {
             List<Integer> indexes = new ArrayList<>();
 
@@ -212,14 +148,6 @@ public class Bot extends AppCompatActivity {
             }
             setInput(image, randomIndex);
         }
-<<<<<<< HEAD
-        // After CPU's turn, switch back to human player's turn
-        turnHuman();
-    }
-
-    // Set the input according to the player (human or CPU)
-    public void setInput(ImageView image, int position) {
-=======
         turnHuman();
     }
 
@@ -227,7 +155,6 @@ public class Bot extends AppCompatActivity {
     // set the input according to the player.
     public void setInput(ImageView image, int position) {
 
->>>>>>> origin/master
         positions[position] = activePlayer; // mark the position the player selected
 
         if (activePlayer == 1) {
@@ -257,11 +184,7 @@ public class Bot extends AppCompatActivity {
         }
     }
 
-<<<<<<< HEAD
-    // Display the result of the game (win, draw)
-=======
     // display the result
->>>>>>> origin/master
     @SuppressLint("SetTextI18n")
     public void displayWinner(String msg, String player) {
         String win_message;
@@ -283,11 +206,7 @@ public class Bot extends AppCompatActivity {
         result.show();
     }
 
-<<<<<<< HEAD
-    // Method to change the player turn
-=======
     // method to change player turn
->>>>>>> origin/master
     public void changeTurn(int next) {
         activePlayer = next; // change and set to next player's turn
         if (activePlayer == 1) {
@@ -299,11 +218,7 @@ public class Bot extends AppCompatActivity {
         }
     }
 
-<<<<<<< HEAD
-    // Method to check if there is a winning combination
-=======
     // method to check if there is a winning combination
->>>>>>> origin/master
     public Boolean result() {
         int i = 0;
         while (i < winning_combos.size()) {
@@ -322,11 +237,7 @@ public class Bot extends AppCompatActivity {
         return false;
     }
 
-<<<<<<< HEAD
-    // Restart the game
-=======
     // restart game method
->>>>>>> origin/master
     public void restartGame() {
         positions = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0};
         activePlayer = 1;
@@ -343,18 +254,10 @@ public class Bot extends AppCompatActivity {
         binding.image8.setImageResource(0);
         binding.image9.setImageResource(0);
 
-<<<<<<< HEAD
-        // Initiating the first turn based on the player type
-=======
->>>>>>> origin/master
         if (nameX.equals("Bot")) {
             turnCPU();
         } else if (nameX.equals("You")) {
             turnHuman();
         }
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/master
