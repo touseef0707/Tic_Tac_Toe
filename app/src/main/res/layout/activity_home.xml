@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pagebkg"
+    android:gravity="center"
+    tools:context=".Home">
+
+    <LinearLayout
+        android:id="@+id/containerHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_border"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:layout_margin="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tic_tac_toe"
+            android:textColor="@color/cyan"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            android:layout_margin="20dp" />
+
+        <Button
+            android:id="@+id/cpu"
+            android:layout_width="315dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/white_border"
+            android:drawableStart="@drawable/ic_android_black_24dp"
+            android:text="@string/play_against_computer"
+            android:textColor="@color/cyan"
+            android:textSize="20sp"
+            android:padding="15dp"
+            tools:ignore="TextSizeCheck" />
+
+        <Button
+            android:id="@+id/human"
+            android:layout_width="315dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/white_border"
+            android:drawableStart="@drawable/baseline_people_24"
+            android:text="@string/play_against_friend"
+            android:textColor="@color/cyan"
+            android:textSize="20sp"
+            android:padding="15dp"
+            tools:ignore="TextSizeCheck" />
+    </LinearLayout>
+
+
+</RelativeLayout>

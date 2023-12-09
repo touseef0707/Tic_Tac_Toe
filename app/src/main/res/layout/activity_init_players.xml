@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,6 +9,7 @@
     tools:context=".InitPlayers">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
@@ -30,7 +30,7 @@
                 android:textSize="40sp"
                 android:textAlignment="center"
                 android:textColor="@color/cyan"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/playerOne"
@@ -73,9 +73,19 @@
                 android:padding="7dp"
                 tools:ignore="VisualLintButtonSize" />
 
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+            <Button
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/baseline_keyboard_backspace_24"
+                android:padding="20dp"
+                android:textSize="30sp"
+                android:layout_gravity="end"
+                tools:ignore="SpeakableTextPresentCheck" />
 
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
 
 
 </RelativeLayout>
