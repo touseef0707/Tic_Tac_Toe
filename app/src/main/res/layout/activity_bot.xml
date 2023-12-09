@@ -4,16 +4,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000000"
-    tools:context=".MainActivity">
+    tools:context=".Bot">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_marginTop="20dp"
         android:gravity="center">
 
         <TextView
-            android:id="@+id/scoreX"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/score_x_0"
@@ -22,7 +23,6 @@
             android:textSize="30sp" />
 
         <TextView
-            android:id="@+id/scoreO"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/score_o_0"
@@ -123,6 +123,7 @@
 
             <ImageView
                 android:id="@+id/image1"
+                android:tag="0"
                 android:layout_width="0dp"
                 android:layout_height="115dp"
                 android:layout_margin="10dp"
@@ -131,6 +132,7 @@
 
             <ImageView
                 android:id="@+id/image2"
+                android:tag="1"
                 android:layout_width="0dp"
                 android:layout_height="115dp"
                 android:layout_margin="10dp"
@@ -138,6 +140,7 @@
                 tools:ignore="ContentDescription,ImageContrastCheck" />
 
             <ImageView
+                android:tag="2"
                 android:id="@+id/image3"
                 android:layout_weight="1"
                 android:layout_width="0dp"
@@ -156,6 +159,7 @@
             android:weightSum="3">
 
             <ImageView
+                android:tag="3"
                 android:id="@+id/image4"
                 android:layout_width="0dp"
                 android:layout_height="115dp"
@@ -164,6 +168,7 @@
                 tools:ignore="ContentDescription,ImageContrastCheck,NestedWeights" />
 
             <ImageView
+                android:tag="4"
                 android:id="@+id/image5"
                 android:layout_width="0dp"
                 android:layout_height="115dp"
@@ -172,6 +177,7 @@
                 tools:ignore="ContentDescription,ImageContrastCheck" />
 
             <ImageView
+                android:tag="5"
                 android:id="@+id/image6"
                 android:layout_weight="1"
                 android:layout_width="0dp"
@@ -190,6 +196,7 @@
             android:weightSum="3">
 
             <ImageView
+                android:tag="6"
                 android:id="@+id/image7"
                 android:layout_weight="1"
                 android:layout_width="0dp"
@@ -203,9 +210,11 @@
                 android:layout_height="115dp"
                 android:layout_margin="10dp"
                 android:layout_weight="1"
+                android:tag="7"
                 tools:ignore="ContentDescription,ImageContrastCheck" />
 
             <ImageView
+                android:tag="8"
                 android:id="@+id/image9"
                 android:layout_weight="1"
                 android:layout_width="0dp"

@@ -8,14 +8,14 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
-public class Result extends Dialog {
+public class ResultBot extends Dialog {
     private final String message;
-    private final MainActivity mainActivity;
+    private final Bot bot;
 
-    public Result(@NonNull Context context, String message, MainActivity mainActivity) {
+    public ResultBot(@NonNull Context context, String message, Bot bot) {
         super(context);
         this.message = message;
-        this.mainActivity = mainActivity;
+        this.bot = bot;
     }
 
     @Override
@@ -28,7 +28,7 @@ public class Result extends Dialog {
 
         Button restart = findViewById(R.id.restart);
         restart.setOnClickListener(view -> {
-            mainActivity.restartGame();
+            bot.restartGame();
             dismiss();
         });
     }

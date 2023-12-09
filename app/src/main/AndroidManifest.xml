@@ -13,13 +13,25 @@
         android:theme="@style/Theme.TicTacToe"
         tools:targetApi="31">
         <activity
+            android:name=".ResultBot"
+            android:exported="false" />
+        <activity
+            android:name=".Bot"
+            android:exported="false" />
+        <activity
+            android:name=".Choice"
+            android:exported="false" />
+        <activity
+            android:name=".InitPlayers"
+            android:exported="false" />
+        <activity
             android:name=".Result"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".InitPlayers"
+            android:name=".Home"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

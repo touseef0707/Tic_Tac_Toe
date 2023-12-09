@@ -8,4 +8,12 @@
     <string name="player_two">Player Two</string>
     <string name="player_one">Player One</string>
     <string name="result">Result</string>
+    <string name="play_against_computer">Play against computer</string>
+    <string name="play_against_friend">Play against friend</string>
+    <string name="tic_tac_toe">Tic-Tac-Toe</string>
+    <string name="your_choice">Your Choice</string>
+    <string name="start">start</string>
+    <string name="back">back</string>
+    <string name="score_x_0">Score x: 0</string>
+    <string name="score_o_0">Score o: 0</string>
 </resources>
