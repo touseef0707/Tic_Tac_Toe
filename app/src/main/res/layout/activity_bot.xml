@@ -10,24 +10,43 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="20dp"
-        android:gravity="center">
+        android:gravity="center_vertical">
 
         <TextView
-
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/score_x_0"
+            android:text="@string/score"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="20dp"/>
+        <TextView
+            android:id="@+id/xScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/x_0"
             android:textColor="@color/white"
             android:layout_marginEnd="20dp"
             android:textSize="30sp" />
 
         <TextView
+            android:id="@+id/oScore"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/score_o_0"
+            android:text="@string/o_0"
             android:textColor="@color/white"
             android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="60dp"
+            android:padding="10dp"
+            android:background="@drawable/baseline_keyboard_backspace_24"
+            android:textSize="35sp"
+            tools:ignore="SpeakableTextPresentCheck" />
     </LinearLayout>
 
     <LinearLayout

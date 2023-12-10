@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
         binding.x.setText(nameX);
         binding.o.setText(nameO);
-
+        binding.back.setOnClickListener(v -> finish());
         binding.image1.setOnClickListener(view -> {
             if (isCellEmpty(0)) {
                 setInput((ImageView) view, 0);
@@ -132,8 +132,8 @@ public class MainActivity extends AppCompatActivity {
         Result result;
         if (msg.equals("win")) {
             result = new Result(MainActivity.this, win_message, MainActivity.this);
-            binding.scoreX.setText("Score x: " + scoreX);
-            binding.scoreO.setText("Score o: " + scoreO);
+            binding.xScore.setText("x: " + scoreX);
+            binding.oScore.setText("o: " + scoreO);
         } else {
             result = new Result(MainActivity.this, draw_message, MainActivity.this);
         }

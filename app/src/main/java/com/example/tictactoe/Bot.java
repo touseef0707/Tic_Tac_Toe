@@ -45,7 +45,7 @@ public class Bot extends AppCompatActivity {
 
         binding.x.setText(nameX);
         binding.o.setText(nameO);
-
+        binding.back.setOnClickListener(v -> finish());
         if (nameX.equals("Bot")) {
             turnCPU();
         } else if (nameX.equals("You")) {
@@ -194,11 +194,11 @@ public class Bot extends AppCompatActivity {
             if (player.equals("You")) {
                 win_message = "Congratulations! You won.";
             } else {
-                win_message = "Alas! You lost.";
+                win_message = "You lost.";
             }
             result = new ResultBot(Bot.this, win_message, Bot.this);
-            binding.scoreX.setText("Score x: " + scoreX);
-            binding.scoreO.setText("Score o: " + scoreO);
+            binding.xScore.setText("x: " + scoreX);
+            binding.oScore.setText("o: " + scoreO);
         } else {
             result = new ResultBot(Bot.this, draw_message, Bot.this);
         }
